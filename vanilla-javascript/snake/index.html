@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake</title>
+</head>
+
+<body>
+    <p id="score">
+        Use WASD or ⇦ ⇧ ⇨ ⇩ to move |
+        <strong>
+            Score: <span></span>
+        </strong>
+    </p>
+    <canvas id="canvas" width="960" height="600"></canvas>
+    <br><br><br>
+    <div id="btnControlContainer">
+        <button class="eightbit-btn eightbit-btn--proceed" id="turnLeft" onclick="turnLeft()">⬅</button>
+        <button class="eightbit-btn eightbit-btn--proceed" id="turnUp" onclick="turnUp()">⬆</button>
+        <button class="eightbit-btn eightbit-btn--proceed" id="turnRight" onclick="turnRight()">➡</button>
+        <button class="eightbit-btn eightbit-btn--proceed" id="turnDown" onclick="turnDown()">⬇</button>
+    </div>
+    <button class="eightbit-btn" id="btnEnter" onclick="start()">ENTER</button>
+    <button class="eightbit-btn eightbit-btn--reset" id="btnReload" onclick="window.location.reload()">PLAY AGAIN</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

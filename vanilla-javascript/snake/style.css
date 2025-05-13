@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.eightbit-btn {
+    background: #92cd41;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    font-family: "Press Start 2P", cursive;
+    text-decoration: none;
+    color: white;
+    box-shadow: inset -4px -4px 0px 0px #4aa52e;
+}
+
+.eightbit-btn:hover,
+.eightbit-btn:focus {
+    background: #76c442;
+    box-shadow: inset -6px -6px 0px 0px #4aa52e;
+}
+
+.eightbit-btn:active {
+    box-shadow: inset 4px 4px 0px 0px #4aa52e;
+}
+
+.eightbit-btn:before,
+.eightbit-btn:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.eightbit-btn:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px #f5f5f5 solid;
+    border-bottom: 6px #f5f5f5 solid;
+}
+
+.eightbit-btn:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px #f5f5f5 solid;
+    border-right: 6px #f5f5f5 solid;
+}
+
+.eightbit-btn--reset {
+    background: #e76e55;
+    box-shadow: inset -4px -4px 0px 0px #8c2022;
+}
+
+.eightbit-btn--reset:hover,
+.eightbit-btn--reset:focus {
+    background: #ce372b;
+    box-shadow: inset -6px -6px 0px 0px #8c2022;
+}
+
+.eightbit-btn--reset:active {
+    box-shadow: inset 4px 4px 0px 0px #8c2022;
+}
+
+.eightbit-btn--proceed {
+    background: #f7d51d;
+    box-shadow: inset -4px -4px 0px 0px #e59400;
+    color: #171717;
+}
+
+.eightbit-btn--proceed:hover,
+.eightbit-btn--proceed:focus {
+    background: #f2c409;
+    box-shadow: inset -6px -6px 0px 0px #e59400;
+}
+
+.eightbit-btn--proceed:active {
+    box-shadow: inset 4px 4px 0px 0px #e59400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+canvas {
+    /* border: 3px solid darkgreen; */
+    background-image: url('bg.png');
+    background-size: cover;
+    width: 50%;
+}
+
+p {
+    color: #f5f5f5;
+}
+
+#turnLeft {
+    grid-area: turnLeft;
+}
+
+#turnUp {
+    grid-area: turnUp;
+}
+
+#turnRight {
+    grid-area: turnRight;
+}
+
+#turnDown {
+    grid-area: turnDown;
+}
+
+body #btnControlContainer {
+    display: hidden;
+    grid-template-areas:
+        '. turnUp .'
+        'turnLeft . turnRight'
+        '. turnDown.';
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    canvas {
+        width: 100%;
+    }
+
+    p {
+        font-size: 8px;
+    }
+}
